@@ -134,17 +134,34 @@
 }
 
 
-/* about section styling */
+/* section styling */
 
 section{
     padding: 100px 0;
 }
 
-.about{
+.about .about-content,
+.skills .skills-content{
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.experience .exp-content{
+    /* display: flex;
+    flex-direction: column; */
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+section{
     font-family: 'Poppins', sans-serif;
 }
 
-.about .title{
+section .title{
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -154,7 +171,7 @@ section{
     font-family: 'Ubuntu',sans-serif;
 }
 
-.about .title::before{
+section .title::before{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -165,8 +182,8 @@ section{
     transform: translateX(-50%);
 }
 
-.about .title::after{
-    content: "who i am";
+section .title::after{
+    
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -177,12 +194,14 @@ section{
     transform: translateX(-50%);
 }
 
-.about .about-content{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+
+/* about section styling */
+
+.about .title::after{
+    content: "who i am";
 }
+
+
 
 .about .about-content .left{
     width: 45%;
@@ -230,6 +249,95 @@ section{
     color: crimson;
     background: none;
 }
+
+/* experience section styling */
+
+.experience{
+    color: #fff;
+    background: url("images/black-background2.webp") no-repeat center;
+}
+.experience .title::before{
+    background: #fff;
+}
+.experience .title::after{
+    background:black;
+}
+
+.experience .exp-content .card{
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.experience .exp-content .card:hover{
+    background: crimson;
+}
+
+.experience .exp-content .card .box{
+    transition: all 0.3s ease;
+}
+
+.experience .exp-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+.experience .exp-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+/* skills section styling  */
+
+
+.skills .skills-content{
+    justify-content: space-evenly;
+}
+
+.skills .skills-content .card{
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin: 20px;
+    background: #c1d7d9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skills .skills-content .card .box{
+    transition: all 0.3s ease;
+}
+.skills .skills-content .card .text{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 7px 0 10px 0;
+}
+.skills .skills-content .card:hover{
+    background: crimson;
+}
+.skills .skills-content .card:hover .text{
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -334,12 +442,12 @@ section{
 }
 
 @media(max-width: 690px){
-    .max-width{
+    /* .max-width{
         padding: 0 23px;
-    }
-    .home .home-content .text-2{
+    } */
+    /* .home .home-content .text-2{
         font-size: 60px;
-    }
+    } */
     
     .home .home-content .text-3{
         font-size: 32px;
