@@ -409,9 +409,101 @@ section .title::after{
 }
 
 
+/* projects section styling */
+
+.projects{
+    color: #fff;
+    background: url("images/black-background2.webp") no-repeat center;
+}
+.projects .title::before{
+    background: #fff;
+}
+.projects .project-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects .project-content .card{
+    width: calc(50% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.projects .project-content .card .box{
+    transition: all 0.3s ease;
+}
+
+.projects .project-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.projects .project-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+.projects .project-content .card:hover{
+    background: crimson;
+}
+
+.contact .contact-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact .contact-content .mail{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px;
+}
+.contact .contact-content .mail a{
+    padding: 10px 10px;
+    color: #111;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+.contact .contact-content .linked{
+    display: flex;
+    justify-content: center;
+    
+ }
+
+.contact .contact-content .linked a{
+    padding: 10px 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #111;
+    transition: all 0.3s ease;
+}
+
+.contact .contact-content .mail a:hover{
+    
+    color: crimson;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.contact .contact-content .linked a:hover{
+    
+    color: crimson;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
 
 
+.footer{
+    background: url("images/black-background2.webp") no-repeat center;
+}
 
+.footer .footer-content{
+    height: 50px;
+}
 
 
 
@@ -477,6 +569,9 @@ section .title::after{
         margin: 20px 0;
         font-size: 25px;
     }
+    .navbar.sticky .menu li a:hover{
+        color: crimson;
+    }
     .home .home-content .text-2{
         font-size: 70px;
     }
@@ -508,7 +603,10 @@ section .title::after{
     .skills__container{
         grid-template-columns:repeat(2,1fr);
     }
-    
+    .projects .project-content .card{
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
 }
 
